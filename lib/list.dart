@@ -330,7 +330,7 @@ class _MyTableViewState extends State<MyTableView> {
     var session = Session();
     try {
       final dio = await session.getDio();
-      var req = '${session.getBaseHost()}/list.php';
+      var req = '${session.getBaseUrl()}/list.php';
       var response = await dio.post(req, data: {
         "page": _currentPage.toString(),
         "rowsPerPage": _recsPerPage.toString(),
